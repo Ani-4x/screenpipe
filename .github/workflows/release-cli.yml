@@ -143,7 +143,9 @@ jobs:
           RUSTFLAGS: "-C target-feature=+crt-static -C link-arg=/LTCG"
         run: |
           cargo check
-          cargo build --release --target x86_64-pc-windows-msvc
+          cargo build --release --target x86_64-pc-windows-msvc  rustc --version
+          cargo --version
+          rustup show
 
       - name: Set version
         shell: pwsh
